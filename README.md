@@ -34,6 +34,19 @@ wrapper library is [k3rn31p4nic](https://sankarsankampa.com)
 
 [List of all contributors](https://github.com/PokeDevs/node-pokedex-api/graphs/contributors)
 
+## Donate
+If want to support the development of this project to keep this alive forever,
+you can send donations to the developers.  
+Your donations will ensure the development of this project and I'll make sure
+this project stays active forever. You can donate via PayPal:
+
+<a href="https://paypal.me/snkrsnkampa" title="Donate via PayPal">
+<img src="https://s1.postimg.org/wbhh3ef5b/paypal.jpg" alt="Donate via PayPal" height="100" />
+</a>
+
 ## License
 
 [GPL-3.0](https://github.com/PokeDevs/node-pokedex-api/blob/master/LICENSE)
+
+> If you liked this project you can **⭐ Star** it on
+[GitHub](https://github.com/PokeDevs/node-pokdex-api) to show your love.  
