@@ -1,7 +1,7 @@
 {
   "name": "pokedex-api",
   "version": "1.0.0",
-  "description": "A wrapper library for the Pokédex API. Get all your Pokemon Needs in one place.",
+  "description": "A wrapper library for the Pokédex API. Get all your Pokémon Needs in one place.",
   "main": "index.js",
   "scripts": {
     "test:lint": "eslint .",
