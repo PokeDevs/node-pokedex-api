@@ -1,0 +1,6 @@
+{
+  "baseURL": "https://pokeapi.bastionbot.org",
+  "versions": [
+    "v1"
+  ]
+}
