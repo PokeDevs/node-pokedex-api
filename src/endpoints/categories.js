@@ -1,3 +1,9 @@
+/**
+ * @file categories.js
+ * @author Sankarsan Kampa
+ * @license GPL-3.0
+ */
+
 const request = require('request-promise-native');
 
 /**
