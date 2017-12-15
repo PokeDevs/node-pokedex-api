@@ -11,15 +11,16 @@ const { getEvolutionStone, getEvolutionStones } = require('./endpoints/evolution
 const { getLeagues, getLeague } = require('./endpoints/league');
 const { getPokemonByNumber, getPokemonCounts } = require('./endpoints/pokemon');
 const { getTypes } = require('./endpoints/types');
+
 /**
  * @class Pokedex
  */
 class Pokedex {
   /**
    * @constructor
-   * @param {Object} [options] the options for Pokedex API library
-   * @param {String} [options.userAgent] the User-Agent header for the HTTP request
-   * @param {String} [options.version] the version of the Pokedex API
+   * @param {Object} [options] The options for Pokedex API library
+   * @param {String} [options.userAgent] The User-Agent header for the HTTP request
+   * @param {String} [options.version] The version of the Pokedex API
    * @example
    * const Pokedex = require('pokedex-api');
    * const pokedex = new Pokedex({
