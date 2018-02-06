@@ -1,11 +1,27 @@
+<div align="center">
+  <br />
+  <p>
+    <a href="https://pokedevs.bastionbot.org"><img src="https://pokedevs.bastionbot.org/assets/images/pokedevs.png" width="546" alt="PokeDevs" /></a>
+  </p>
+  <br />
+  <p>
+    <a href="https://nodei.co/npm/pokedex-api/"><img src="https://nodei.co/npm/pokedex-api.png?downloads=true&stars=true" alt="npm installnfo" /></a>
+  </p>
+  <p>
+    <a href="https://discord.gg/7P4H3TY"><img src="https://discordapp.com/api/guilds/361911937820393472/widget.png" alt="PokeDevs Discord server" /></a>
+    <a href="https://www.npmjs.com/package/pokedex-api"><img src="https://img.shields.io/npm/v/pokedex-api.svg" alt="NPM version" /></a>
+    <a href="https://www.npmjs.com/package/pokedex-api"><img src="https://img.shields.io/npm/dt/pokedex-api.svg" alt="NPM downloads" /></a>
+    <a href="https://david-dm.org/PokeDevs/node-pokedex-api"><img src="https://david-dm.org/PokeDevs/node-pokedex-api.svg" alt="Dependencies" /></a>
+    <a href="https://snyk.io/test/github/PokeDevs/node-pokedex-api"><img src="https://snyk.io/test/github/PokeDevs/node-pokedex-api/badge.svg" alt="Known Vulnerabilities" /></a>
+    <a href="LICENSE.md"><img src="https://img.shields.io/github/license/PokeDevs/node-pokedex-api.svg" alt="LICENSE" /></a>
+    <a href="https://paypal.me/snkrsnkampa"><img src="https://img.shields.io/badge/donate-PayPal-003086.svg" alt="PayPal" /></a>
+  </p>
+</div>
+
+
 # Pokédex API <small>Library Wrapper</small>
 A wrapper library for the [Pokédex API](https://pokedevs.bastionbot.org).
 Get all your Pokémon Needs in one place.
-
-[![GitHub release](https://img.shields.io/github/release/PokeDevs/node-pokedex-api.svg?style=flat)](https://github.com/PokeDevs/node-pokedex-api/releases)
-[![Dependencies](https://david-dm.org/PokeDevs/node-pokedex-api.svg)](https://david-dm.org/PokeDevs/node-pokedex-api)
-[![Known Vulnerabilities](https://snyk.io/test/github/PokeDevs/node-pokedex-api/badge.svg)](https://snyk.io/test/github/PokeDevs/node-pokedex-api)
-[![license](https://img.shields.io/github/license/PokeDevs/node-pokedex-api.svg)](LICENSE)
 
 ## Installation
 This is a [Node.js](https://nodejs.org/en) module available through the
