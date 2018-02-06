@@ -5,12 +5,7 @@
  */
 
 const config = require('../settings/config.json');
-const { getCategories } = require('./endpoints/categories');
-const { getEggGroups } = require('./endpoints/egg-groups');
-const { getEvolutionStone, getEvolutionStones } = require('./endpoints/evolution-stone');
-const { getLeagues, getLeague } = require('./endpoints/league');
-const { getPokemonByNumber, getPokemonCounts } = require('./endpoints/pokemon');
-const { getTypes } = require('./endpoints/types');
+const request = require('request-promise-native');
 
 /**
  * @class Pokedex
@@ -48,21 +43,153 @@ class Pokedex {
       this.BASE_URL = config.baseURL;
     }
 
-    /* /categories */
-    this.getCategories = getCategories;
-    /* /egg-groups */
-    this.getEggGroups = getEggGroups;
-    /* /evolution-stone */
-    this.getEvolutionStone = getEvolutionStone;
-    this.getEvolutionStones = getEvolutionStones;
-    /* /league */
-    this.getLeague = getLeague;
-    this.getLeagues = getLeagues;
-    /* /pokemon */
-    this.getPokemonByNumber = getPokemonByNumber;
-    this.getPokemonCounts = getPokemonCounts;
-    /* /types */
-    this.getTypes = getTypes;
+    this.makeRequest = async function(path) {
+      try {
+        let options = {
+          uri: `${this.BASE_URL}${path}`,
+          headers: {
+            'User-Agent': this.USER_AGENT,
+            'Auth': this.AUTH
+          },
+          json: true
+        };
+
+        let response = await request(options);
+        return response;
+      }
+      catch (e) {
+        throw e;
+      }
+    };
+
+    /**
+     * Returns an array of Pokémon Categories discovered in the Pokémon World.
+     * @method getCategories
+     * @returns {Promise<Object>} Resolves discovered Pokémon categories
+     * @example
+     * pokedex.getCategories()
+     *   .then(categories => console.log(categories))
+     *   .catch(console.error);
+     */
+    this.getCategories = async function() {
+      let path = '/categories';
+      return await this.makeRequest(path);
+    };
+
+    /**
+     * Returns an array of Pokémon Egg Groups discovered in the Pokémon World.
+     * @method getEggGroups
+     * @returns {Promise<Object>} Resolves discovered Pokémon egg groups
+     * @example
+     * pokedex.getEggGroups()
+     *   .then(eggGroups => console.log(eggGroups))
+     *   .catch(console.error);
+     */
+    this.getEggGroups = async function() {
+      let path = '/egg-groups';
+      return await this.makeRequest(path);
+    };
+
+    /**
+     * Returns a Evolution Stone object containing the details about the evolution stone.
+     * @method getEvolutionStone
+     * @param {String} slug The string used to identify this evolution stone.
+     * @returns {Promise<Object>} Resolves the specified Pokémon evolution stone
+     * @example
+     * pokedex.getEvolutionStone(slug)
+     *   .then(evolutionStone => console.log(evolutionStone))
+     *   .catch(console.error);
+     */
+    this.getEvolutionStone = async function(slug) {
+      let path = `/evolution-stone/${slug}`;
+      return await this.makeRequest(path);
+    };
+
+    /**
+     * Returns an array of Pokémon Evolution Stone names discovered in the Pokémon world.
+     * @method getEvolutionStones
+     * @returns {Promise<Object>} Resolves discovered Pokémon evolution stones
+     * @example
+     * pokedex.getEvolutionStones()
+     *   .then(evolutionStones => console.log(evolutionStones))
+     *   .catch(console.error);
+     */
+    this.getEvolutionStones = async function() {
+      let path = '/evolution-stone';
+      return await this.makeRequest(path);
+    };
+
+    /**
+     * Returns a Pokémon League object containing the details about the league.
+     * @method getLeague
+     * @param {String} slug The string used to identify this Pokémon leauge.
+     * @returns {Promise<Object>} Resolves the specified Pokémon league
+     * @example
+     * pokedex.getLeague(slug)
+     *   .then(league => console.log(league))
+     *   .catch(console.error);
+     */
+    this.getLeague = async function(slug) {
+      let path = `/league/${slug}`;
+      return await this.makeRequest(path);
+    };
+
+    /**
+     * Returns an array of Pokémon League names known to us.
+     * @method getEvolutionStones
+     * @returns {Promise<Object>} Resolves discovered Pokémon leagues
+     * @example
+     * pokedex.getLeagues()
+     *   .then(leagues => console.log(leagues))
+     *   .catch(console.error);
+     */
+    this.getLeagues = async function() {
+      let path = '/league';
+      return await this.makeRequest(path);
+    };
+
+    /**
+     * Returns an array of Pokémon objects containing all the forms of the Pokémon specified the Pokédex number.
+     * @method getPokemonByNumber
+     * @param {Number} number The Pokédex number of the Pokémon
+     * @returns {Promise<Object>} Resolves information about the specified Pokémon
+     * @example
+     * pokedex.getPokemonByNumber(658)
+     *   .then(pokemon => console.log(pokemon))
+     *   .catch(console.error);
+     */
+    this.getPokemonByNumber = async function(number) {
+      let path = `/pokemon/${number}`;
+      return await this.makeRequest(path);
+    };
+
+    /**
+     * Returns a Pokémon Counts object containing the number of Pokémon in each generation and the total number of Pokémon in the Pokémon World.
+     * @method getPokemonCounts
+     * @returns {Promise<Object>} Resolves the number of Pokémon in each generatrion and in total
+     * @example
+     * pokedex.getPokemonCounts()
+     *   .then(counts => console.log(counts))
+     *   .catch(console.error);
+     */
+    this.getPokemonCounts = async function() {
+      let path = '/pokemon/counts';
+      return await this.makeRequest(path);
+    };
+
+    /**
+     * Returns an array of Pokémon Types discovered in the Pokémon World.
+     * @method getTypes
+     * @returns {Promise<Object>} Resolves discovered Pokémon types
+     * @example
+     * pokedex.getTypes()
+     *   .then(types => console.log(types))
+     *   .catch(console.error);
+     */
+    this.getTypes = async function() {
+      let path = '/types';
+      return await this.makeRequest(path);
+    };
   }
 }
 
