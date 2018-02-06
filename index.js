@@ -4,4 +4,4 @@
  * @license GPL-3.0
  */
 
-module.exports = require('./src/pokedex');
+module.exports = require('./src/Pokedex');
