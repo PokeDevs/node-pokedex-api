@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/PokeDevs/node-pokedex-api#readme",
   "devDependencies": {
-    "eslint": "^4.13.1"
+    "eslint": "^4.17.0"
   },
   "dependencies": {
     "request": "^2.83.0",
