@@ -4,6 +4,7 @@ Get all your Pokémon Needs in one place.
 
 [![GitHub release](https://img.shields.io/github/release/PokeDevs/node-pokedex-api.svg?style=flat)](https://github.com/PokeDevs/node-pokedex-api/releases)
 [![Dependencies](https://david-dm.org/PokeDevs/node-pokedex-api.svg)](https://david-dm.org/PokeDevs/node-pokedex-api)
+[![Known Vulnerabilities](https://snyk.io/test/github/PokeDevs/node-pokedex-api/badge.svg)](https://snyk.io/test/github/PokeDevs/node-pokedex-api)
 [![license](https://img.shields.io/github/license/PokeDevs/node-pokedex-api.svg)](LICENSE)
 
 ## Installation
