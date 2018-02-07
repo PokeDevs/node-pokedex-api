@@ -149,6 +149,23 @@ class Pokedex {
     };
 
     /**
+     * Returns an array of Pokémon objects containing all the forms of the Pokémon specified the name.
+     * @method getPokemonByNumber
+     * @param {String} name The name of the Pokémon
+     * @returns {Promise<Object>} Resolves information about the specified Pokémon
+     * @example
+     * // It's best practice to use encodeURIComponent() to encode the name
+     * // string so the API server doesn't respond with 404.
+     * pokedex.getPokemonByName(encodeURIComponent('Pikachu'))
+     *   .then(pokemon => console.log(pokemon))
+     *   .catch(console.error);
+     */
+    this.getPokemonByName = async function(name) {
+      let path = `/pokemon/${name}`;
+      return await this.makeRequest(path);
+    };
+
+    /**
      * Returns an array of Pokémon objects containing all the forms of the Pokémon specified the Pokédex number.
      * @method getPokemonByNumber
      * @param {Number} number The Pokédex number of the Pokémon
