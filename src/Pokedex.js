@@ -65,7 +65,7 @@ class Pokedex {
     /**
      * Returns an array of Pokémon Categories discovered in the Pokémon World.
      * @method getCategories
-     * @returns {Promise<Object>} Resolves discovered Pokémon categories
+     * @returns {Promise<Array>} Resolves discovered Pokémon categories
      * @example
      * pokedex.getCategories()
      *   .then(categories => console.log(categories))
@@ -79,7 +79,7 @@ class Pokedex {
     /**
      * Returns an array of Pokémon Egg Groups discovered in the Pokémon World.
      * @method getEggGroups
-     * @returns {Promise<Object>} Resolves discovered Pokémon egg groups
+     * @returns {Promise<Array>} Resolves discovered Pokémon egg groups
      * @example
      * pokedex.getEggGroups()
      *   .then(eggGroups => console.log(eggGroups))
@@ -108,7 +108,7 @@ class Pokedex {
     /**
      * Returns an array of Pokémon Evolution Stone names discovered in the Pokémon world.
      * @method getEvolutionStones
-     * @returns {Promise<Object>} Resolves discovered Pokémon evolution stones
+     * @returns {Promise<Array>} Resolves discovered Pokémon evolution stones
      * @example
      * pokedex.getEvolutionStones()
      *   .then(evolutionStones => console.log(evolutionStones))
@@ -137,7 +137,7 @@ class Pokedex {
     /**
      * Returns an array of Pokémon League names known to us.
      * @method getEvolutionStones
-     * @returns {Promise<Object>} Resolves discovered Pokémon leagues
+     * @returns {Promise<Array>} Resolves discovered Pokémon leagues
      * @example
      * pokedex.getLeagues()
      *   .then(leagues => console.log(leagues))
@@ -152,7 +152,7 @@ class Pokedex {
      * Returns an array of Pokémon objects containing all the forms of the Pokémon specified the name.
      * @method getPokemonByNumber
      * @param {String} name The name of the Pokémon
-     * @returns {Promise<Object>} Resolves information about the specified Pokémon
+     * @returns {Promise<Array>} Resolves information about the specified Pokémon
      * @example
      * // It's best practice to use encodeURIComponent() to encode the name
      * // string so the API server doesn't respond with 404.
@@ -169,7 +169,7 @@ class Pokedex {
      * Returns an array of Pokémon objects containing all the forms of the Pokémon specified the Pokédex number.
      * @method getPokemonByNumber
      * @param {Number} number The Pokédex number of the Pokémon
-     * @returns {Promise<Object>} Resolves information about the specified Pokémon
+     * @returns {Promise<Array>} Resolves information about the specified Pokémon
      * @example
      * pokedex.getPokemonByNumber(658)
      *   .then(pokemon => console.log(pokemon))
@@ -197,7 +197,7 @@ class Pokedex {
     /**
      * Returns an array of Pokémon Types discovered in the Pokémon World.
      * @method getTypes
-     * @returns {Promise<Object>} Resolves discovered Pokémon types
+     * @returns {Promise<Array>} Resolves discovered Pokémon types
      * @example
      * pokedex.getTypes()
      *   .then(types => console.log(types))
