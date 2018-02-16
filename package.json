@@ -1,6 +1,6 @@
 {
   "name": "pokedex-api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A wrapper library for the Pokédex API. Get all your Pokémon Needs in one place.",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,6 @@
     "eslint": "^4.17.0"
   },
   "dependencies": {
-    "request": "^2.83.0",
-    "request-promise-native": "^1.0.5"
+    "got": "^8.1.0"
   }
 }

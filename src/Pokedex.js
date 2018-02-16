@@ -5,7 +5,7 @@
  */
 
 const config = require('../settings/config.json');
-const request = require('request-promise-native');
+const request = require('got');
 
 /**
  * @class Pokedex
@@ -46,7 +46,6 @@ class Pokedex {
     this.makeRequest = async function(path) {
       try {
         let options = {
-          uri: `${this.BASE_URL}${path}`,
           headers: {
             'User-Agent': this.USER_AGENT,
             'Auth': this.AUTH
@@ -54,8 +53,8 @@ class Pokedex {
           json: true
         };
 
-        let response = await request(options);
-        return response;
+        let response = await request(`${this.BASE_URL}${path}`, options);
+        return response.body;
       }
       catch (e) {
         throw e;
