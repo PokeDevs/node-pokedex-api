@@ -1,0 +1,9 @@
+/.github
+/src
+/.eslintignore
+/.eslintrc.yml
+/makefile
+/tsconfig.json
+/package-lock.json
+/yarn-error.log
+/yarn.lock
