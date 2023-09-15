@@ -1,37 +1,37 @@
 {
-  "name": "pokedex-api",
-  "version": "1.1.2",
-  "description": "A wrapper library for the Pokédex API. Get all your Pokémon Needs in one place.",
-  "main": "index.js",
-  "scripts": {
-    "test:lint": "eslint .",
-    "test": "npm run test:lint && echo All tests passed successfully.",
-    "start": "node ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PokeDevs/node-pokedex-api.git"
-  },
-  "keywords": [
-    "pokemon",
-    "pokedex",
-    "api",
-    "database",
-    "pokeapi",
-    "pokedb",
-    "wrapper",
-    "library"
-  ],
-  "author": "Sankarsan Kampa",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/PokeDevs/node-pokedex-api/issues"
-  },
-  "homepage": "https://github.com/PokeDevs/node-pokedex-api#readme",
-  "devDependencies": {
-    "eslint": "^4.17.0"
-  },
-  "dependencies": {
-    "got": "^8.1.0"
-  }
+    "name": "pokedex-api",
+    "version": "2.0.0",
+    "description": "Node.js wrapper library for the Pokédex API.",
+    "type": "module",
+    "main": "./dist/pokedex.js",
+    "typings": "./typings/pokedex.d.ts",
+    "repository": "https://github.com/PokeDevs/node-pokedex-api.git",
+    "homepage": "https://pokedevs.gitbook.io",
+    "author": "iamtraction",
+    "license": "MIT",
+    "keywords": [
+        "pokemon",
+        "pokedex",
+        "api",
+        "database",
+        "pokeapi",
+        "pokedb",
+        "wrapper",
+        "library"
+    ],
+    "scripts": {
+        "docs": "npx typedoc src/pokedex.ts",
+        "build": "tsc",
+        "test": "eslint . --ext .ts"
+    },
+    "devDependencies": {
+        "@types/node": "^20.6.0",
+        "@typescript-eslint/eslint-plugin": "^6.7.0",
+        "@typescript-eslint/parser": "^6.7.0",
+        "eslint": "^8.49.0",
+        "typescript": "^5.2.2"
+    },
+    "dependencies": {
+        "undici": "^5.24.0"
+    }
 }
